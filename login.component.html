@@ -1,0 +1,31 @@
+<div class="container">
+    <form style="margin-top: 40px;" (ngSubmit)="formSubmit()">
+
+      <label style="margin-left: 10px;">
+        UserName</label>
+
+      <input style="margin-left: 10px;" type="text" [(ngModel)]="loginData.username" name="username">
+
+      <div *ngIf="userempty" style="color: red;margin-left: 85px">
+        Username required</div>
+
+      <div *ngIf="passwordempty" style="color: red;margin-left: 85px">
+        Password required</div>
+
+
+      <label style="margin-left: 5px;">Password
+     </label>
+
+      <input style="margin-left: 20px;" type="password" [(ngModel)]="loginData.password" name="password">
+     
+      <div *ngIf="incorrect" style="color: red;margin-left: 85px">
+        InvalidCredentials</div>
+
+      <button style="margin-left: 130px;background-color: rgb(49, 49, 99);" 
+       type="submit"> <span style="color: rgb(212, 209, 209);">
+       Login </span></button>
+
+    </form>
+    
+  </div>
+ 
